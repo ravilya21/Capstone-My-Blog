@@ -1,0 +1,375 @@
+/* public/styles.css */
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+  
+    box-sizing: border-box;
+    background-color: #f4f4f9; /* Лёгкий фон для всей страницы */
+    color: #333;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    min-height: calc(100vh - 100px); /* Adjusts the height of the main content area */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Заголовок (header) */
+header {
+    background-color: #007BFF; /* Цвет фона заголовка */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для эффекта глубины */
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* расстояние между элементами меню */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* плавное изменение цвета */
+}
+
+nav ul li a:hover {
+    color: #f0f0f0; /* более светлый цвет при наведении */
+}
+
+/* Контейнер для контента */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Заголовок страницы */
+.welcome-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+/* Кнопка создания поста */
+.create-post-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.create-post-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Список постов */
+.post-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.post-item {
+    margin: 10px 0;
+    padding: 10px;
+    background: #e9f7ff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    display: flex; /* Используем Flexbox */
+    justify-content: space-between; /* Разделяем заголовок и действия */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+.post-actions {
+    display: flex; /* Делаем кнопки в одну строку */
+    gap: 10px; /* Расстояние между кнопками */
+}
+
+.post-link {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
+    flex-grow: 1; /* Пост занимает оставшееся пространство */
+}
+
+.post-link:hover {
+    text-decoration: underline;
+}
+
+/* Ссылки редактирования и кнопки удаления */
+.edit-link {
+    background-color: #28a745; /* Зеленый фон */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none; /* Убираем подчеркивание, если это ссылка */
+    display: inline-block; /* Чтобы вело себя как кнопка */
+    transition: background-color 0.3s ease;
+}
+
+.edit-link:hover {
+    background-color: #218838; /* Более темный зеленый при наведении */
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Контейнер формы */
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок формы */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+}
+
+/* Общий стиль для всех входных данных формы */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Поля ввода */
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Текстовая область */
+.form-textarea {
+    height: 100px;
+    resize: vertical; /* Позволяет изменять размер вертикально */
+}
+
+/* Кнопка отправки */
+.form-submit {
+    background-color: #007BFF; /* Синий фон */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color: #0056b3; /* Более темный синий при наведении */
+}
+
+/* Контейнер поста и формы */
+.post-container, .edit-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Заголовок поста и редактирования */
+.post-title, .edit-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Контент поста и редактирования */
+.post-content, .edit-container .form-group {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Элементы формы */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #555;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #007BFF; /* Цвет рамки при фокусе */
+}
+
+/* Кнопка "Сохранить изменения" */
+.btn-save {
+    background-color: #28a745; /* Зелёный фон */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-save:hover {
+    background-color: #218838; /* Более темный зеленый при наведении */
+}
+
+/* Кнопка "Назад на Главную" */
+.edit-back-btn {
+    background-color: #007BFF; /* Синий фон */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none; /* Убираем подчеркивание, если это ссылка */
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.edit-back-btn:hover {
+    background-color: #0056b3; /* Более темный синий при наведении */
+}
+
+
+.btn-back {
+    background-color: #007BFF; /* Синий фон */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none; /* Убираем подчеркивание, если это ссылка */
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-back:hover {
+    background-color: #0056b3; /* Более темный синий при наведении */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Full-width footer */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links li {
+    display: inline;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007BFF;
+}
